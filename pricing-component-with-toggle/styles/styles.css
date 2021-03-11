@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* Variables */
+
+:root {
+    --vl-grayblue: hsl(240, 78%, 98%);
+    --l-grayblue: hsl(234, 14%, 74%);
+    --grayblue: hsl(233, 13%, 49%);
+    --dark-grayblue: hsl(232, 13%, 33%);
+}
+
+/* Universal Selectors */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--vl-grayblue)
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+ul {
+    color: var(--grayblue);
+    font-weight: 700;
+    list-style: none;
+    border-top: 1px solid var(--l-grayblue);
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pricing {
+    background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;
+    background-size: 25%, 25%;
+}
+
+.pricing .container {
+    min-height: 100vh;
+}
+
+/* Top Section */
+
+.pricing-header {
+    margin-top: 1rem;
+}
+
+.top-header {
+    color: var(--grayblue);
+    margin-bottom: 2rem;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler-span {
+    color: var(--l-grayblue);
+    font-weight: 700;
+    margin: 0 1.5rem;
+}
+
+.toggle-label {
+    background: linear-gradient(80deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 5rem;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-label::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    transition: .2s linear;
+}
+
+.checkbox:checked + .toggle-label::after {
+    transform: translateX(30px);
+}
+
+.checkbox {
+    position: absolute;
+    left: -20px;
+}
+
+/* Pricing Componenets */
+
+.pricing-components {
+    display: flex;
+    margin: 6rem;
+}
+
+.card {
+    padding: 2rem;
+    margin: 0 .7rem;
+    background: #fff;
+    color: var(--grayblue);
+}
+
+.card:nth-child(1) {
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(80deg,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: .5rem;
+    transform: scale(1.15);
+    padding: 3.5rem 2rem;
+    color: #fff;
+}
+
+.card:nth-child(2) * {
+	transform: scale(0.9);
+}
+
+.card:nth-child(2) .btn {
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+}
+
+.card:nth-child(2) .btn:hover {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.card:nth-child(2) ul {
+    color: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card:nth-child(2) li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card:nth-child(3) {
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.card h1 {
+    font-size: 4rem;
+}
+
+.card h1::first-letter {
+    font-size: 2.5rem;
+    margin-right: .3rem;
+}
+
+.card .annually {
+    display: none;
+}
+
+.show-annually .card .annually {
+    display: block;
+}
+
+.show-annually .card .monthly {
+    display: none;
+}
+
+.components li {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--l-grayblue);
+
+}
+
+.components {
+    margin: 2rem 0;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 850px) {
+    .pricing-header {
+        margin-top: 3rem;
+    }
+    .pricing-components {
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+    .pricing-components .card {
+        margin: 1rem 0;
+        border-radius: .5rem;
+    }
+    .card:nth-child(2) {
+        transform: scale(1);
+    }
+    .card:nth-child(2) * {
+        transform: scale(1);
+    }
+}
+
+/* Utilities */
+
+.container {
+    width: 1500px;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    background: linear-gradient(40deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.btn:hover {
+    background: none;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+}

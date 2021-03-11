@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="./assets/favicon-32x32.png" type="image/png" sizes="32x32" rel="icon">
+    <title>Frontend Mentor | Pricing Component with Toggle</title>
+</head>
+
+<body>
+    <section class="pricing">
+        <div class="container flex">
+            <div class="pricing-header flex">
+                <h1 class="top-header">Our Pricing</h1>
+                <div class="toggler">
+                    <span class="toggler-span">Monthly</span>
+                    <span>
+                        <input type="checkbox" id="checkbox" class="checkbox">
+                        <label for="checkbox" class="toggle-label"></label>
+                    </span>
+                    <span class="toggler-span">Annually</span>
+                </div>
+            </div>
+            <div class="pricing-components grid">
+                <div class="card flex">
+                    <h3>Basic</h3>
+                    <h1 class="monthly">$19.99</h1>
+                    <h1 class="annually">$199.99</h1>
+                    <ul class="components flex">
+                        <li>500 GB Storage</li>
+                        <li>2 User Allowed</li>
+                        <li>Send up to 3GB</li>
+                    </ul>
+                    <a href="#" class="btn">LEARN MORE</a>
+                </div>
+                <div class="card flex">
+                    <h3>Professional</h3>
+                    <h1 class="monthly">$24.99</h1>
+                    <h1 class="annually">$249.99</h1>
+                    <ul class="components flex">
+                        <li>1 TB Storage</li>
+                        <li>5 User Allowed</li>
+                        <li>Send up to 10 GB</li>
+                    </ul>
+                    <a href="#" class="btn">LEARN MORE</a>
+                </div>
+                <div class="card flex">
+                    <h3>Master</h3>
+                    <h1 class="monthly">$39.99</h1>
+                    <h1 class="annually">$399.99</h1>
+                    <ul class="components flex">
+                        <li>2 TB Storage</li>
+                        <li>10 User Allowed</li>
+                        <li>Send up to 20 GB</li>
+                    </ul>
+                    <a href="#" class="btn">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
